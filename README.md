@@ -9,14 +9,14 @@ Website modern untuk Klinik Bidanku yang menyediakan informasi dan pendaftaran d
 ---
 
 ## 📋 Daftar Isi
-- [Tentang Project](#tentang-project)
-- [Fitur Utama](#fitur-utama)
-- [Teknologi yang Digunakan](#teknologi-yang-digunakan)
-- [Struktur Folder](#struktur-folder)
-- [Instalasi & Setup](#instalasi--setup)
-- [Cara Menjalankan](#cara-menjalankan)
-- [Tim Pengembang](#tim-pengembang)
-- [Informasi Akademik](#informasi-akademik)
+- [Tentang Project](#-tentang-project)
+- [Fitur Utama](#-fitur-utama)
+- [Teknologi yang Digunakan](#️-teknologi-yang-digunakan)
+- [Struktur Folder](#-struktur-folder)
+- [Instalasi & Setup](#-instalasi--setup)
+- [Cara Menjalankan](#-cara-menjalankan)
+- [Tim Pengembang](#-tim-pengembang)
+- [Informasi Akademik](#-informasi-akademik)
 
 ---
 
