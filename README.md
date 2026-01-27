@@ -273,7 +273,7 @@ Project ini dibuat untuk keperluan akademik dan distribusi terbatas untuk mata k
 ## 🔗 Links Penting
 
 - **Repository**: [GitHub](https://github.com/anggaalfiansah/klinik-bidanku)
-- **Live Demo**: [Vercel Deployment](klinik-bidanku.vercel.app)
+- **Live Demo**: [Vercel Deployment](https://klinik-bidanku.vercel.app)
 
 ---
 
