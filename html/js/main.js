@@ -164,4 +164,33 @@ Keluhan: ${data.keluhan}
     } else {
         console.warn("Form kontak tidak ditemukan!");
     }
+
+    // Auto-play relax audio after any user gesture to satisfy browser policies
+    const relaxAudio = document.querySelector('audio');
+    if (relaxAudio) {
+        let started = false;
+
+        const startAudio = () => {
+            if (started) return;
+            relaxAudio.muted = false;
+            relaxAudio.play()
+                .then(() => {
+                    started = true;
+                    document.removeEventListener('click', startAudio);
+                    document.removeEventListener('touchstart', startAudio);
+                    document.removeEventListener('keydown', startAudio);
+                    document.removeEventListener('mousemove', startAudio);
+                    document.removeEventListener('scroll', startAudio);
+                })
+                .catch(() => {
+                    // keep listeners so user can try again
+                });
+        };
+
+        document.addEventListener('click', startAudio, { once: true });
+        document.addEventListener('touchstart', startAudio, { once: true });
+        document.addEventListener('keydown', startAudio, { once: true });
+        document.addEventListener('mousemove', startAudio, { once: true });
+        document.addEventListener('scroll', startAudio, { once: true, passive: true });
+    }
 });

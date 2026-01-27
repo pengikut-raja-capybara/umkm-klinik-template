@@ -41,6 +41,7 @@ Project ini merupakan **tugas akhir semester** untuk mata kuliah Pemrograman Ber
 - ✅ **Multi-Page Navigation** - 5 halaman utama dengan routing yang smooth
 - ✅ **Video Integration** - Video tour fasilitas klinik
 - ✅ **Animated Components** - Efek hover dan transisi yang menarik
+- ✅ **Persistent Audio Player (React)** - Pemutar musik relaksasi yang tetap berjalan saat berpindah halaman (SPA)
 - ✅ **Dark/Light Mode Ready** - Support untuk theme switching (future enhancement)
 
 ### Halaman Website
@@ -88,6 +89,7 @@ Klinik Bidanku/
 ├── 📁 public/                 # Static assets
 │   ├── img/                   # Gambar statis
 │   ├── video/                 # Video statis
+│   ├── audio/                 # Audio statis
 │   └── site.webmanifest       # PWA manifest
 │
 ├── 📁 html/                   # Versi HTML murni (Syarat Tugas)
@@ -96,8 +98,9 @@ Klinik Bidanku/
 │   ├── jadwal.html
 │   ├── edukasi.html
 │   ├── kontak.html
-│   ├── img/                   # Aset untuk halaman HTML
+│   ├── img/                   # Gambar untuk halaman HTML
 │   ├── video/                 # Video untuk halaman HTML
+│   ├── audio/                 # Audio untuk halaman HTML
 │   ├── js/                    # JavaScript vanilla
 │   └── favicon/               # Favicon files
 │
@@ -108,17 +111,15 @@ Klinik Bidanku/
 │   │
 │   ├── 📁 components/         # Reusable components
 │   │   ├── Navbar.tsx         # Navigation component
-│   │   └── Footer.tsx         # Footer component
+│   │   ├── Footer.tsx         # Footer component
+│   │   └── AudioPlayer.tsx    # Pemutar audio relaksasi persisten
 │   │
-│   ├── 📁 pages/              # Page components
-│   │   ├── Home.tsx
-│   │   ├── Tentang.tsx
-│   │   ├── Jadwal.tsx
-│   │   ├── Edukasi.tsx
-│   │   └── Kontak.tsx
-│   │
-│   └── 📁 assets/             # Asset lokal
-│       └── (images, icons, dll)
+│   └── 📁 pages/              # Page components
+│       ├── Home.tsx
+│       ├── Tentang.tsx
+│       ├── Jadwal.tsx
+│       ├── Edukasi.tsx
+│       └── Kontak.tsx
 │
 └── 📁 node_modules/           # Dependencies (auto-generated)
 ```

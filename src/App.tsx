@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // Import Komponen
 import Navbar from './components/Navbar';
 import Footer from './components/Footer'; // Import Footer
+import AudioPlayer from './components/AudioPlayer';
 
 // Import Halaman
 import Edukasi from './pages/Edukasi';
@@ -20,8 +21,11 @@ function App() {
         {/* NAVBAR */}
         <Navbar />
 
+        {/* AUDIO PLAYER PERSISTEN */}
+        <AudioPlayer />
+
         {/* KONTEN UTAMA (flex-grow biar footer kedorong ke bawah kalau konten dikit) */}
-        <div className="flex-grow">
+        <div className="flex-grow pb-28">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/tentang" element={<Tentang />} />
