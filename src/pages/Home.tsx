@@ -56,7 +56,7 @@ export default function Home() {
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
         {services.map((item, index) => (
           <div key={index} className="text-center p-6 bg-white rounded-xl shadow-md hover:shadow-xl hover:-translate-y-2 transition duration-300 border border-gray-100 group">
-            <div className="text-5xl mb-4 transform group-hover:scale-110 transition duration-300">{item.icon}</div>
+            <div className="logo-emoticon text-5xl mb-4 transform group-hover:scale-110 transition duration-300">{item.icon}</div>
             <h3 className="text-xl font-semibold text-gray-700 mb-2 group-hover:text-pink-600 transition">{item.title}</h3>
             <p className="text-gray-500 text-sm">{item.desc}</p>
           </div>
@@ -69,7 +69,7 @@ export default function Home() {
         <div className="grid md:grid-cols-3 gap-8 text-center">
           {features.map((item, index) => (
             <div key={index} className="p-4">
-              <div className="text-4xl mb-4 bg-white w-16 h-16 mx-auto flex items-center justify-center rounded-full shadow-sm">{item.icon}</div>
+              <div className="logo-emoticon text-4xl mb-4 bg-white w-16 h-16 mx-auto flex items-center justify-center rounded-full shadow-sm">{item.icon}</div>
               <h4 className="font-bold text-lg text-gray-800 mb-2">{item.title}</h4>
               <p className="text-sm text-gray-600 leading-relaxed">{item.desc}</p>
             </div>

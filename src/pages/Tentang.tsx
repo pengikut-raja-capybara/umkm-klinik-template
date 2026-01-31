@@ -103,7 +103,7 @@ export default function Tentang() {
               </div>
             ))}
           </div>
-          <video autoPlay loop muted className="w-full my-2 rounded-xl overflow-hidden shadow-md">
+          <video autoPlay loop muted controls playsInline preload="metadata" className="w-full my-2 rounded-xl overflow-hidden shadow-md">
             <source src="/video/room-tour-clinic.mp4" type="video/mp4" />
             Browser Anda tidak mendukung video.
           </video>

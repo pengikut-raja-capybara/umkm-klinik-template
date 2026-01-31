@@ -8,8 +8,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
     <link rel="manifest" href="favicon/site.webmanifest" />
     <title>Klinik Bidanku - Tugas Kelompok</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.0.0" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/custom.css" />
     <script>
       tailwind.config = {
         theme: {
@@ -41,14 +42,17 @@
     <nav class="bg-white shadow-md sticky top-0 z-50">
       <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         <!-- LOGO -->
-        <a href="index.html" class="text-2xl font-bold text-gray-700"> Klinik <span class="text-pink-600">Bidanku</span> </a>
+        <a href="index.html" class="text-2xl font-bold text-gray-700">
+          Klinik <span class="text-pink-600">Bidanku</span>
+          <p class="text-sm text-gray-500 leading-snug">Layanan Kesehatan Ibu & Anak</p></a
+        >
 
         <!-- MENU DESKTOP -->
         <div class="hidden md:flex space-x-6 font-medium items-center">
           <a href="index.html" class="nav-link">Beranda</a>
           <a href="tentang.html" class="nav-link">Tentang</a>
           <a href="jadwal.html" class="nav-link">Jadwal</a>
-          <a href="edukasi.html" class="nav-link">Edukasi</a>
+          <a href="edukasi.html" class="nav-link"> Edukasi </a>
           <a href="kontak.html" class="bg-pink-600 text-white px-5 py-2 rounded-full hover:bg-pink-700 transition shadow-md hover:shadow-lg">Kontak</a>
         </div>
 
