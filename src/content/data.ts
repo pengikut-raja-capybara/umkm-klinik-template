@@ -1,0 +1,452 @@
+export const siteData = {
+  brand: {
+    name: "Klinik Bidanku",
+    highlight: "Bidanku",
+    tagline: "Sistem Informasi E-Health",
+  },
+  nav: [
+    { label: "Beranda", path: "/" },
+    { label: "Tentang", path: "/tentang" },
+    { label: "Jadwal", path: "/jadwal" },
+    { label: "Edukasi", path: "/edukasi" },
+    { label: "Kontak", path: "/kontak", isCta: true },
+  ],
+  hero: {
+    title: "Layanan Kesehatan Ibu & Anak",
+    highlight: "Terpercaya",
+    description:
+      "Platform informasi dan pendaftaran digital untuk klinik bidan mandiri, memudahkan akses Anda ke layanan kesehatan terbaik dari rumah.",
+    ctaLabel: "Konsultasi Sekarang",
+    ctaLink: "/kontak",
+    image: {
+      src: "/img/ibu-dan-bayi.jpg",
+      alt: "Ibu dan Bayi",
+    },
+  },
+  services: [
+    { icon: "🤰", title: "Cek Kehamilan", desc: "Pemeriksaan rutin & USG" },
+    { icon: "👶", title: "Persalinan", desc: "Proses melahirkan nyaman" },
+    { icon: "💉", title: "Imunisasi", desc: "Jadwal imunisasi dasar" },
+    { icon: "🤱", title: "KB & Nifas", desc: "Perawatan pasca melahirkan" },
+  ],
+  features: [
+    { icon: "⭐", title: "Bidan Berpengalaman", desc: "Pelayanan oleh bidan profesional dengan pengalaman tahunan." },
+    { icon: "🏠", title: "Fasilitas Lengkap", desc: "Klinik yang nyaman dan peralatan modern." },
+    { icon: "💵", title: "Biaya Terjangkau", desc: "Kualitas terbaik dengan harga yang bersahabat." },
+  ],
+  stats: [
+    { value: "15+", label: "Tahun Pengalaman" },
+    { value: "3.5K", label: "Keluarga Terlayani" },
+    { value: "24/7", label: "Konsultasi Darurat" },
+    { value: "99%", label: "Kepuasan Pasien" },
+  ],
+  testimonials: [
+    {
+      name: "Anisa Putri",
+      role: "Ibu Muda",
+      quote: "Pelayanan ramah dan informatif. Saya merasa tenang selama kontrol kehamilan.",
+    },
+    {
+      name: "Dian Kartika",
+      role: "Pasien Persalinan",
+      quote: "Proses persalinan terasa nyaman dan ditangani dengan profesional.",
+    },
+    {
+      name: "Rani Sasmita",
+      role: "Ibu Balita",
+      quote: "Jadwal imunisasi jelas dan petugas selalu responsif saat ditanya.",
+    },
+  ],
+  education: {
+    title: "Ruang Edukasi",
+    subtitle: "Panduan lengkap kesehatan Ibu & Anak serta persiapan persalinan.",
+    carouselItems: [
+      {
+        id: 1,
+        category: "Info Kehamilan",
+        title: "Pentingnya Gizi Ibu Hamil",
+        desc:
+          "Zat besi dan Asam Folat adalah nutrisi krusial. Kekurangan nutrisi ini dapat menyebabkan anemia. Pastikan konsumsi sayuran hijau dan protein cukup.",
+        tone: "accent",
+        icon: "heart",
+      },
+      {
+        id: 2,
+        category: "Tumbuh Kembang",
+        title: "Manfaat ASI Eksklusif",
+        desc:
+          "ASI adalah makanan terbaik bagi bayi 0-6 bulan. Mengandung antibodi alami yang melindungi bayi dari infeksi virus dan bakteri serta mencegah stunting.",
+        tone: "secondary",
+        icon: "smile",
+      },
+      {
+        id: 3,
+        category: "Pencegahan",
+        title: "Jadwal Imunisasi Dasar",
+        desc:
+          "Lindungi si kecil dengan imunisasi lengkap (BCG, Polio, Campak). Cek jadwal lengkap di menu Jadwal atau konsultasikan langsung dengan Bidan.",
+        tone: "success",
+        icon: "shield",
+      },
+    ],
+    documents: [
+      "Fotokopi KTP Suami & Istri (2 Lembar)",
+      "Fotokopi Kartu Keluarga (KK)",
+      "Buku KIA (Buku Pink) Wajib Dibawa",
+      "Kartu BPJS Kesehatan (Status Aktif)",
+    ],
+    supplies: [
+      "Pakaian Ganti Ibu (Daster Kancing Depan)",
+      "Pakaian Bayi Lengkap (Baju, Topi, Sarung Tangan)",
+      "Popok / Diapers Newborn (Secukupnya)",
+      "Perlengkapan Mandi & Handuk",
+      "Pembalut Nifas",
+    ],
+  },
+  schedule: {
+    practice: [
+      { hari: "Senin", buka: "08.00 WIB", tutup: "16.00 WIB" },
+      { hari: "Selasa", buka: "08.00 WIB", tutup: "16.00 WIB" },
+      { hari: "Rabu", buka: "08.00 WIB", tutup: "16.00 WIB" },
+      { hari: "Kamis", buka: "08.00 WIB", tutup: "16.00 WIB" },
+      { hari: "Jumat", buka: "08.00 WIB", tutup: "16.00 WIB" },
+      { hari: "Sabtu", buka: "09.00 WIB", tutup: "14.00 WIB" },
+      { hari: "Minggu", buka: "Tutup", tutup: "-" },
+    ],
+    immunization: [
+      { umur: "0 Bulan", vaksin: "Hepatitis B0" },
+      { umur: "1 Bulan", vaksin: "BCG, Polio 1" },
+      { umur: "2 Bulan", vaksin: "DPT-HB-Hib 1, Polio 2" },
+      { umur: "3 Bulan", vaksin: "DPT-HB-Hib 2, Polio 3" },
+      { umur: "4 Bulan", vaksin: "DPT-HB-Hib 3, Polio 4" },
+      { umur: "9 Bulan", vaksin: "Campak / MR" },
+    ],
+    note:
+      "Pastikan kondisi bayi sehat (tidak demam) saat akan imunisasi. Bawa selalu Buku KIA (Buku Pink).",
+  },
+  contact: {
+    header: "Hubungi Kami",
+    subheader: "Konsultasi kesehatan Ibu & Anak kini lebih mudah.",
+    locationTitle: "Lokasi Klinik",
+    address: [
+      "Jl. Kita Masih Panjang No. 1",
+      "(Dekat Posyandu), Kecamatan Ibu dan Anak.",
+    ],
+    hours: [
+      "Senin - Jumat: 08.00 - 16.00 WIB",
+      "Sabtu: 09.00 - 14.00 WIB",
+    ],
+    mapEmbedUrl:
+      "https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1511.546025029246!2d106.82121053646382!3d-6.29831165673253!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sid!2sid!4v1765185626546!5m2!1sid!2sid",
+    emergencyTitle: "Butuh Bantuan Darurat?",
+    emergencyNote: "Untuk persalinan darurat 24 Jam, silakan telepon langsung.",
+    emergencyPhone: "081234567890",
+    waNumber: "6281234567890",
+    serviceOptions: [
+      "Cek Hamil (ANC)",
+      "Imunisasi Anak",
+      "KB & Nifas",
+      "Persalinan",
+    ],
+  },
+  about: {
+    introTitle: "Tentang Kami",
+    intro:
+      "Klinik Bidanku adalah layanan kesehatan ibu & anak yang berfokus pada pendampingan kehamilan, persalinan, imunisasi, dan perawatan bayi. Kami hadir untuk memberikan pengalaman pelayanan yang ramah, profesional, dan terpercaya bagi keluarga Indonesia.",
+    profile: {
+      title: "Profil Bidan",
+      name: "Bidan Siti Aisyah Nurhayati, S.Tr.Keb",
+      role: "Head Midwife / Kepala Bidan",
+      desc:
+        "Seorang bidan berpengalaman lebih dari 15 tahun dalam membantu proses persalinan, pendampingan kehamilan, dan edukasi kesehatan ibu & anak. Dengan pendekatan yang lembut dan penuh empati, beliau selalu memastikan setiap ibu merasa aman dan nyaman selama proses pelayanan.",
+      image: {
+        src: "/img/bidan-foto.png",
+        alt: "Bidan Siti Aisyah Nurhayati",
+      },
+    },
+    vision:
+      "Menjadi klinik bidan terpercaya yang memberikan layanan berkualitas, edukatif, dan ramah keluarga melalui sistem kesehatan digital yang modern.",
+    missions: [
+      "Memberikan pelayanan kesehatan ibu & anak secara profesional dan humanis.",
+      "Menyediakan informasi kesehatan yang akurat dan mudah diakses.",
+      "Mendukung proses persalinan aman dan nyaman bagi setiap ibu.",
+      "Mengoptimalkan teknologi digital untuk meningkatkan kenyamanan pasien.",
+    ],
+    facilities: [
+      { src: "/img/ruang-tunggu.png", alt: "Ruang Tunggu Klinik" },
+      { src: "/img/ruang-periksa.png", alt: "Ruang Periksa Klinik" },
+      { src: "/img/ruang-inap.png", alt: "Ruang Inap Klinik" },
+    ],
+    reasons: [
+      "Bidan berpengalaman dan tersertifikasi.",
+      "Fasilitas lengkap dan nyaman untuk ibu & anak.",
+      "Layanan cepat, responsif, dan ramah keluarga.",
+      "Akses informasi kesehatan yang mudah melalui platform digital.",
+    ],
+    video: {
+      src: "/video/room-tour-clinic.mp4",
+      label: "Room Tour Klinik",
+    },
+  },
+  audio: {
+    title: "Musik Relaksasi & Meditasi",
+    subtitle: "Dengarkan musik menenangkan untuk kesejahteraan Anda",
+    trackSrc: "/audio/relax-song.mp3",
+    artistName: "Sleep Volume",
+    artistUrl:
+      "https://pixabay.com/users/sleepvolume-44054560/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=346581",
+    sourceName: "Pixabay",
+    sourceUrl:
+      "https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=346581",
+  },
+  themes: [
+    {
+      id: "clinic",
+      name: "Soft Rose",
+      description: "Hangat, lembut, klinis.",
+      tokens: {
+        pageBg: "#f8fafc",
+        surface: "#ffffff",
+        card: "#ffffff",
+        text: "#1f2937",
+        muted: "#6b7280",
+        border: "#f1f5f9",
+        accent: "#ec4899",
+        accentStrong: "#db2777",
+        accentSoft: "#fce7f3",
+        secondary: "#0ea5e9",
+        secondaryStrong: "#0284c7",
+        secondarySoft: "#e0f2fe",
+        heroFrom: "#ffe4e6",
+        heroTo: "#fff7f9",
+        footerFrom: "#ec4899",
+        footerTo: "#db2777",
+      },
+    },
+    {
+      id: "ocean",
+      name: "Ocean Teal",
+      description: "Segar, bersih, modern.",
+      tokens: {
+        pageBg: "#f8fafc",
+        surface: "#ffffff",
+        card: "#ffffff",
+        text: "#0f172a",
+        muted: "#64748b",
+        border: "#e2e8f0",
+        accent: "#0ea5a4",
+        accentStrong: "#0f766e",
+        accentSoft: "#ccfbf1",
+        secondary: "#2563eb",
+        secondaryStrong: "#1d4ed8",
+        secondarySoft: "#dbeafe",
+        heroFrom: "#ccfbf1",
+        heroTo: "#eff6ff",
+        footerFrom: "#0ea5a4",
+        footerTo: "#2563eb",
+      },
+    },
+    {
+      id: "sunrise",
+      name: "Sunrise",
+      description: "Enerjik, optimis, cerah.",
+      tokens: {
+        pageBg: "#fffaf5",
+        surface: "#ffffff",
+        card: "#ffffff",
+        text: "#1f2937",
+        muted: "#6b7280",
+        border: "#fde7d9",
+        accent: "#f97316",
+        accentStrong: "#ea580c",
+        accentSoft: "#ffedd5",
+        secondary: "#facc15",
+        secondaryStrong: "#eab308",
+        secondarySoft: "#fef9c3",
+        heroFrom: "#ffedd5",
+        heroTo: "#fff7ed",
+        footerFrom: "#f97316",
+        footerTo: "#facc15",
+      },
+    },
+    {
+      id: "forest",
+      name: "Forest",
+      description: "Alami, menenangkan, sehat.",
+      tokens: {
+        pageBg: "#f6fdf9",
+        surface: "#ffffff",
+        card: "#ffffff",
+        text: "#0f172a",
+        muted: "#64748b",
+        border: "#dcfce7",
+        accent: "#16a34a",
+        accentStrong: "#15803d",
+        accentSoft: "#dcfce7",
+        secondary: "#0ea5e9",
+        secondaryStrong: "#0284c7",
+        secondarySoft: "#e0f2fe",
+        heroFrom: "#dcfce7",
+        heroTo: "#f0fdf4",
+        footerFrom: "#16a34a",
+        footerTo: "#0ea5e9",
+      },
+    },
+    {
+      id: "slate",
+      name: "Slate Gold",
+      description: "Elegan, profesional, modern.",
+      tokens: {
+        pageBg: "#f8fafc",
+        surface: "#ffffff",
+        card: "#ffffff",
+        text: "#0f172a",
+        muted: "#64748b",
+        border: "#e2e8f0",
+        accent: "#334155",
+        accentStrong: "#0f172a",
+        accentSoft: "#e2e8f0",
+        secondary: "#f59e0b",
+        secondaryStrong: "#d97706",
+        secondarySoft: "#fef3c7",
+        heroFrom: "#e2e8f0",
+        heroTo: "#f8fafc",
+        footerFrom: "#334155",
+        footerTo: "#f59e0b",
+      },
+    },
+  ],
+  layouts: {
+    home: {
+      active: "hero-split",
+      variants: [
+        {
+          id: "hero-left",
+          label: "Hero Left",
+          order: ["hero", "services", "stats", "features", "testimonials"],
+          heroStyle: "left",
+        },
+        {
+          id: "hero-center",
+          label: "Hero Center",
+          order: ["hero", "stats", "services", "features", "testimonials"],
+          heroStyle: "center",
+        },
+        {
+          id: "hero-split",
+          label: "Hero Split",
+          order: ["hero", "features", "services", "testimonials", "stats"],
+          heroStyle: "split",
+        },
+        {
+          id: "hero-minimal",
+          label: "Hero Minimal",
+          order: ["hero", "services", "features", "stats"],
+          heroStyle: "minimal",
+        },
+        {
+          id: "hero-stack",
+          label: "Hero Stack",
+          order: ["hero", "testimonials", "services", "features", "stats"],
+          heroStyle: "stack",
+        },
+      ],
+    },
+    edukasi: {
+      active: "carousel-split",
+      variants: [
+        {
+          id: "carousel-split",
+          label: "Carousel Split",
+          layout: "carousel-side",
+        },
+        {
+          id: "carousel-full",
+          label: "Carousel Full",
+          layout: "carousel-full",
+        },
+        {
+          id: "carousel-stacked",
+          label: "Carousel Stacked",
+          layout: "carousel-stacked",
+        },
+      ],
+    },
+    jadwal: {
+      active: "wide",
+      variants: [
+        {
+          id: "wide",
+          label: "Wide Layout",
+          layout: "wide",
+        },
+        {
+          id: "compact",
+          label: "Compact Layout",
+          layout: "compact",
+        },
+        {
+          id: "stacked",
+          label: "Stacked Layout",
+          layout: "stacked",
+        },
+      ],
+    },
+    kontak: {
+      active: "map-left",
+      variants: [
+        {
+          id: "map-left",
+          label: "Map Left",
+          layout: "map-left",
+        },
+        {
+          id: "map-right",
+          label: "Map Right",
+          layout: "map-right",
+        },
+        {
+          id: "map-full",
+          label: "Map Full",
+          layout: "map-full",
+        },
+        {
+          id: "form-only",
+          label: "Form Only",
+          layout: "form-only",
+        },
+      ],
+    },
+    tentang: {
+      active: "profile-left",
+      variants: [
+        {
+          id: "profile-left",
+          label: "Profile Left",
+          layout: "profile-left",
+        },
+        {
+          id: "profile-right",
+          label: "Profile Right",
+          layout: "profile-right",
+        },
+        {
+          id: "profile-top",
+          label: "Profile Top",
+          layout: "profile-top",
+        },
+        {
+          id: "facilities-focus",
+          label: "Facilities Focus",
+          layout: "facilities-focus",
+        },
+      ],
+    },
+  },
+  settings: {
+    defaultTheme: "clinic",
+  },
+  footer: {
+    text: "2025 Klinik Bidanku. Sistem Informasi E-Health.",
+  },
+};

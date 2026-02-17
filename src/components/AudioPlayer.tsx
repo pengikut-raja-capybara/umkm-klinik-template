@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { siteData } from "../content/data";
 
 function formatTime(value: number) {
   if (!value || Number.isNaN(value)) return "0:00";
@@ -15,6 +16,7 @@ export default function AudioPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
+  const { audio } = siteData;
 
   // Adjust bottom offset when user reaches page bottom
   useEffect(() => {
@@ -84,10 +86,26 @@ export default function AudioPlayer() {
     setProgress(value);
   };
 
+  const handleTogglePlay = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (isPlaying) {
+      audio.pause();
+      setIsPlaying(false);
+    } else {
+      audio.play().catch(() => {});
+      setIsPlaying(true);
+    }
+  };
+
   return (
     <div className="fixed left-4 right-4 z-40 transition-all duration-300 ease-out" style={{ bottom: `${bottomOffset}px` }}>
-      <div className="max-w-4xl mx-auto bg-white/90 backdrop-blur shadow-xl shadow-pink-200/60 border border-pink-100 rounded-2xl px-4 py-3 flex items-center gap-4">
-        <div className="w-11 h-11 rounded-full bg-gradient-to-r from-pink-500 to-pink-600 text-white flex items-center justify-center shadow-md">
+      <div className="max-w-4xl mx-auto theme-card backdrop-blur shadow-xl border rounded-2xl px-4 py-3 flex flex-col sm:flex-row items-center gap-3 sm:gap-4">
+        <button
+          onClick={handleTogglePlay}
+          className="w-11 h-11 rounded-full theme-accent-gradient text-white flex items-center justify-center shadow-md hover:shadow-lg hover:scale-105 transition transform flex-shrink-0"
+          aria-label={isPlaying ? "Pause" : "Play"}
+        >
           {isPlaying ? (
             <svg aria-hidden className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M8 5h3v14H8zm5 0h3v14h-3z" />
@@ -97,41 +115,40 @@ export default function AudioPlayer() {
               <path d="M7 5v14l12-7z" />
             </svg>
           )}
-        </div>
+        </button>
 
         <div className="flex-1 min-w-0">
-          <div className="flex items-center justify-between text-sm text-gray-700 font-semibold">
-            <span>Musik Relaksasi & Meditasi</span>
-            <div className="text-xs text-gray-500">
+          <div className="flex flex-col gap-1">
+            <h3 className="text-sm theme-text font-semibold truncate">{audio.title}</h3>
+            <p className="text-xs theme-muted truncate">{audio.subtitle}</p>
+            <p className="text-xs theme-muted leading-tight">
               Music by{" "}
-              <a
-                href="https://pixabay.com/users/sleepvolume-44054560/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=346581"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-pink-600 hover:text-pink-700 underline font-medium transition"
-              >
-                Sleep Volume
+              <a href={audio.artistUrl} target="_blank" rel="noopener noreferrer" className="theme-accent-text hover:underline font-medium">
+                {audio.artistName}
               </a>{" "}
-              from{" "}
-              <a
-                href="https://pixabay.com/music//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=346581"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-pink-600 hover:text-pink-700 underline font-medium transition"
-              >
-                Pixabay
+              on{" "}
+              <a href={audio.sourceUrl} target="_blank" rel="noopener noreferrer" className="theme-accent-text hover:underline font-medium">
+                {audio.sourceName}
               </a>
-            </div>
+            </p>
           </div>
-          <p className="text-xs text-gray-500">Dengarkan musik menenangkan untuk kesejahteraan Anda</p>
-          <div className="mt-2 flex items-center gap-3">
-            <span className="text-xs text-gray-500 w-10 text-right">{formatTime(progress)}</span>
-            <input type="range" min={0} max={duration || 0} value={progress} step={1} onChange={(e) => handleSeek(Number(e.target.value))} className="w-full accent-pink-600" aria-label="Seek audio" />
-            <span className="text-xs text-gray-500 w-10">{formatTime(duration)}</span>
+          <div className="mt-2 flex items-center gap-2">
+            <span className="text-xs theme-muted w-10 text-right flex-shrink-0">{formatTime(progress)}</span>
+            <input
+              type="range"
+              min={0}
+              max={duration || 0}
+              value={progress}
+              step={1}
+              onChange={(e) => handleSeek(Number(e.target.value))}
+              className="w-full theme-range"
+              aria-label="Seek audio"
+            />
+            <span className="text-xs theme-muted w-10 flex-shrink-0">{formatTime(duration)}</span>
           </div>
         </div>
 
-        <audio ref={audioRef} autoPlay loop src="/audio/relax-song.mp3" preload="metadata" />
+        <audio ref={audioRef} autoPlay loop src={audio.trackSrc} preload="metadata" />
       </div>
     </div>
   );

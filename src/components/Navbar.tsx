@@ -1,45 +1,47 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { siteData } from "../content/data";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false); // State untuk menu mobile
   const location = useLocation();
+  const { brand, nav } = siteData;
 
   // Helper untuk cek menu aktif
   const isActive = (path: string) => {
-    return location.pathname === path ? "text-pink-600 font-bold" : "text-gray-500 hover:text-pink-600";
+    return location.pathname === path ? "theme-accent-text font-bold" : "theme-muted hover-theme-accent-text";
   };
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
+    <nav className="theme-surface shadow-md sticky top-0 z-50">
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* LOGO */}
-        <Link to="/" className="text-2xl font-bold text-gray-700">
-          Klinik <span className="text-pink-600">Bidanku</span>
+        <Link to="/" className="text-2xl font-bold theme-text">
+          Klinik <span className="theme-accent-text">{brand.highlight}</span>
         </Link>
 
         {/* --- MENU DESKTOP (Hidden di HP) --- */}
         <div className="hidden md:flex space-x-6 font-medium items-center">
-          <Link to="/" className={isActive("/")}>
-            Beranda
-          </Link>
-          <Link to="/tentang" className={isActive("/tentang")}>
-            Tentang
-          </Link>
-          <Link to="/jadwal" className={isActive("/jadwal")}>
-            Jadwal
-          </Link>
-          <Link to="/edukasi" className={isActive("/edukasi")}>
-            Edukasi
-          </Link>
-          <Link to="/kontak" className="bg-pink-600 text-white px-5 py-2 rounded-full hover:bg-pink-700 transition shadow-md hover:shadow-lg">
-            Kontak
-          </Link>
+          {nav.map((item) =>
+            item.isCta ? (
+              <Link
+                key={item.path}
+                to={item.path}
+                className="theme-accent-bg hover-theme-accent-strong-bg text-white px-5 py-2 rounded-full transition shadow-md hover:shadow-lg"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <Link key={item.path} to={item.path} className={isActive(item.path)}>
+                {item.label}
+              </Link>
+            )
+          )}
         </div>
 
         {/* --- TOMBOL HAMBURGER (Hidden di Desktop) --- */}
         <div className="md:hidden">
-          <button onClick={() => setIsOpen(!isOpen)} className="text-gray-500 hover:text-pink-600 focus:outline-none">
+          <button onClick={() => setIsOpen(!isOpen)} className="theme-muted hover-theme-accent-text focus:outline-none">
             {/* Ikon Hamburger / X (Ganti icon sesuai state isOpen) */}
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {isOpen ? (
@@ -55,23 +57,24 @@ export default function Navbar() {
       {/* --- MENU MOBILE DROPDOWN --- */}
       {/* Tampilkan hanya jika isOpen = true */}
       {isOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full left-0">
+        <div className="md:hidden theme-surface border-t theme-border shadow-lg absolute w-full left-0">
           <div className="flex flex-col space-y-4 px-4 py-6 font-medium">
-            <Link to="/" onClick={() => setIsOpen(false)} className={isActive("/")}>
-              Beranda
-            </Link>
-            <Link to="/tentang" onClick={() => setIsOpen(false)} className={isActive("/tentang")}>
-              Tentang
-            </Link>
-            <Link to="/jadwal" onClick={() => setIsOpen(false)} className={isActive("/jadwal")}>
-              Jadwal
-            </Link>
-            <Link to="/edukasi" onClick={() => setIsOpen(false)} className={isActive("/edukasi")}>
-              Edukasi
-            </Link>
-            <Link to="/kontak" onClick={() => setIsOpen(false)} className="bg-pink-600 text-white px-5 py-2 rounded-full text-center hover:bg-pink-700">
-              Kontak
-            </Link>
+            {nav.map((item) =>
+              item.isCta ? (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  onClick={() => setIsOpen(false)}
+                  className="theme-accent-bg hover-theme-accent-strong-bg text-white px-5 py-2 rounded-full text-center"
+                >
+                  {item.label}
+                </Link>
+              ) : (
+                <Link key={item.path} to={item.path} onClick={() => setIsOpen(false)} className={isActive(item.path)}>
+                  {item.label}
+                </Link>
+              )
+            )}
           </div>
         </div>
       )}
