@@ -19,7 +19,7 @@ export const siteData = {
     ctaLabel: "Konsultasi Sekarang",
     ctaLink: "/kontak",
     image: {
-      src: "/img/ibu-dan-bayi.jpg",
+      src: "img/ibu-dan-bayi.jpg",
       alt: "Ibu dan Bayi",
     },
   },
@@ -160,7 +160,7 @@ export const siteData = {
       desc:
         "Seorang bidan berpengalaman lebih dari 15 tahun dalam membantu proses persalinan, pendampingan kehamilan, dan edukasi kesehatan ibu & anak. Dengan pendekatan yang lembut dan penuh empati, beliau selalu memastikan setiap ibu merasa aman dan nyaman selama proses pelayanan.",
       image: {
-        src: "/img/bidan-foto.png",
+        src: "img/bidan-foto.png",
         alt: "Bidan Siti Aisyah Nurhayati",
       },
     },
@@ -173,9 +173,9 @@ export const siteData = {
       "Mengoptimalkan teknologi digital untuk meningkatkan kenyamanan pasien.",
     ],
     facilities: [
-      { src: "/img/ruang-tunggu.png", alt: "Ruang Tunggu Klinik" },
-      { src: "/img/ruang-periksa.png", alt: "Ruang Periksa Klinik" },
-      { src: "/img/ruang-inap.png", alt: "Ruang Inap Klinik" },
+      { src: "img/ruang-tunggu.png", alt: "Ruang Tunggu Klinik" },
+      { src: "img/ruang-periksa.png", alt: "Ruang Periksa Klinik" },
+      { src: "img/ruang-inap.png", alt: "Ruang Inap Klinik" },
     ],
     reasons: [
       "Bidan berpengalaman dan tersertifikasi.",
@@ -184,14 +184,14 @@ export const siteData = {
       "Akses informasi kesehatan yang mudah melalui platform digital.",
     ],
     video: {
-      src: "/video/room-tour-clinic.mp4",
+      src: "video/room-tour-clinic.mp4",
       label: "Room Tour Klinik",
     },
   },
   audio: {
     title: "Musik Relaksasi & Meditasi",
     subtitle: "Dengarkan musik menenangkan untuk kesejahteraan Anda",
-    trackSrc: "/audio/relax-song.mp3",
+    trackSrc: "audio/relax-song.mp3",
     artistName: "Sleep Volume",
     artistUrl:
       "https://pixabay.com/users/sleepvolume-44054560/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=346581",
