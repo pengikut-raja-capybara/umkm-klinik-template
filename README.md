@@ -3,7 +3,7 @@
 Template website modern untuk UMKM Klinik yang responsif dan data-driven. Solusi siap pakai untuk klinik kesehatan ibu dan anak. Dibangun dengan React 19, TypeScript, Tailwind CSS, dan Vite untuk performa optimal.
 
 ![Status](https://img.shields.io/badge/status-active-success)
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Version](https://img.shields.io/badge/version-0.0.1-blue)
 ![React](https://img.shields.io/badge/React-19.2.0-61DAFB?logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.6+-3178C6?logo=typescript)
 ![Tailwind](https://img.shields.io/badge/Tailwind-4.1+-38B2AC?logo=tailwindcss)
