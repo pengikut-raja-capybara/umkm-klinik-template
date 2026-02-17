@@ -172,6 +172,33 @@ Vite config sudah teroptimasi dengan:
 
 ---
 
+## 🌐 GitHub Pages Deployment
+
+Template ini sudah dikonfigurasi untuk otomatis deploy ke GitHub Pages!
+
+### Auto Deploy Setup:
+- ✅ **GitHub Actions Workflow** - `.github/workflows/deploy.yml`
+- ✅ **Base Path Config** - Vite sudah set untuk `/umkm-klinik-template/`
+- ✅ **No Jekyll** - `.nojekyll` file untuk bypass Jekyll processing
+
+### Cara Kerja:
+1. Push ke GitHub → GitHub Actions trigger
+2. Build dengan Bun → `bun run build`
+3. Deploy ke `/dist` → GitHub Pages otomatis serve
+
+### Deploy Sekarang:
+```bash
+git add .
+git commit -m "ready for github pages"
+git push origin main
+```
+
+Deploy akan otomatis berjalan. Lihat progress di GitHub **Actions** tab.
+
+Live: https://pengikut-raja-capybara.github.io/umkm-klinik-template/
+
+---
+
 ## 📋 Prasyarat
 
 - **Node.js** v18.x+ atau **Bun** v1.0+
