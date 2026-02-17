@@ -7,5 +7,5 @@ import { compression } from "vite-plugin-compression2";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss(), ViteImageOptimizer(), compression()],
-  base: "/umkm-klinik-template/",
+  base: process.env.GITHUB_ACTIONS ? "/umkm-klinik-template/" : "/",
 });
