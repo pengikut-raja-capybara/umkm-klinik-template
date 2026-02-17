@@ -6,34 +6,6 @@ import { compression } from "vite-plugin-compression2";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-    ViteImageOptimizer({
-      png: {
-        quality: 80,
-      },
-      jpeg: {
-        quality: 80,
-      },
-      jpg: {
-        quality: 80,
-      },
-    }),
-    compression({
-      algorithms: ['gzip'],
-    }),
-  ],
+  plugins: [react(), tailwindcss(), ViteImageOptimizer(), compression()],
   base: process.env.GITHUB_ACTIONS ? "/umkm-klinik-template/" : "/",
-  build: {
-    minify: 'terser',
-    sourcemap: false,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          'vendor': ['react', 'react-router-dom'],
-        },
-      },
-    },
-  },
 });
