@@ -1,8 +1,39 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import tailwindcss from "@tailwindcss/vite";
+import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+import { compression } from "vite-plugin-compression2";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    ViteImageOptimizer({
+      png: {
+        quality: 80,
+      },
+      jpeg: {
+        quality: 80,
+      },
+      jpg: {
+        quality: 80,
+      },
+    }),
+    compression({
+      algorithms: ['gzip'],
+    }),
+  ],
+  base: process.env.GITHUB_ACTIONS ? "/umkm-klinik-template/" : "/",
+  build: {
+    minify: 'terser',
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'vendor': ['react', 'react-router-dom'],
+        },
+      },
+    },
+  },
 });

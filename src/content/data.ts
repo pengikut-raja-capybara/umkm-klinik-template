@@ -447,6 +447,6 @@ export const siteData = {
     defaultTheme: "clinic",
   },
   footer: {
-    text: "2025 Klinik Bidanku. Sistem Informasi E-Health.",
+    text: "2025 Klinik Bidanku. Sistem Informasi E-Health. | Diperbarui oleh Raja Capybara",
   },
 };
